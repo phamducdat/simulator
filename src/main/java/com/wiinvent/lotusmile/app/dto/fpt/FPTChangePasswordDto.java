@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.app.dto.fpt;
 
-import com.wiinvent.lotusmile.app.dto.ChangePasswordDto;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NonNull;

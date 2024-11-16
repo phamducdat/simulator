@@ -1,8 +1,5 @@
 package com.wiinvent.lotusmile.domain.service;
 
-import com.wiinvent.lotusmile.app.dto.ChangePasswordDto;
-import com.wiinvent.lotusmile.app.dto.SendMessageDto;
-import com.wiinvent.lotusmile.app.dto.UpdateCustomerInfoDto;
 import com.wiinvent.lotusmile.app.dto.fpt.FPTChangePasswordDto;
 import com.wiinvent.lotusmile.app.dto.fpt.FPTSendMessageDto;
 import com.wiinvent.lotusmile.app.dto.fpt.FPTUpdateProfileDto;

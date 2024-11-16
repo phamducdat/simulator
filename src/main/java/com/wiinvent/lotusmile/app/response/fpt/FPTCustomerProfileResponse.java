@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.app.response.fpt;
 
-import com.wiinvent.lotusmile.app.dto.FullEnrollDataDto;
 import com.wiinvent.lotusmile.domain.entity.User;
 import com.wiinvent.lotusmile.domain.entity.UserProfile;
 import com.wiinvent.lotusmile.domain.entity.types.UserState;

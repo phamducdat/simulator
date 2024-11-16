@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.domain.service;
 
-import com.wiinvent.lotusmile.app.dto.UpdateDeviceTokenDto;
 import com.wiinvent.lotusmile.app.response.UpdateDeviceTokenResponse;
 import com.wiinvent.lotusmile.domain.entity.DeviceToken;
 import com.wiinvent.lotusmile.domain.entity.types.AppType;

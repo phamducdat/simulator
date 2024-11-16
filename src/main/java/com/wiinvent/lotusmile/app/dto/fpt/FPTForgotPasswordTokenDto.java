@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.app.dto.fpt;
 
-import com.wiinvent.lotusmile.app.dto.ForgotPasswordTokenDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

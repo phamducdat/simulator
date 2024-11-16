@@ -1,4 +1,4 @@
-package com.wiinvent.lotusmile.app.controller.simulator;
+package com.wiinvent.lotusmile.app.controller;
 
 import com.wiinvent.lotusmile.app.dto.fpt.*;
 import com.wiinvent.lotusmile.app.response.fpt.*;

@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.domain.entity;
 
-import com.wiinvent.lotusmile.app.dto.FullEnrollDataDto;
 import com.wiinvent.lotusmile.app.response.fpt.FPTCustomerProfileResponse;
 import com.wiinvent.lotusmile.domain.util.JsonParser;
 import jakarta.persistence.Column;

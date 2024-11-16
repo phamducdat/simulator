@@ -2,8 +2,6 @@ package com.wiinvent.lotusmile.domain;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wiinvent.lotusmile.app.dto.SendMessageDto;
-import com.wiinvent.lotusmile.app.dto.UpdateCustomerInfoDto;
 import com.wiinvent.lotusmile.app.dto.fpt.FPTSendMessageDto;
 import com.wiinvent.lotusmile.app.dto.fpt.FPTUpdateProfileDto;
 import com.wiinvent.lotusmile.app.response.CustomerInfoResponse;

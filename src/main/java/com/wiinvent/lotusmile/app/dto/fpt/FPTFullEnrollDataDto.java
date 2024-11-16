@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.app.dto.fpt;
 
-import com.wiinvent.lotusmile.app.dto.FullEnrollDataDto;
 import com.wiinvent.lotusmile.domain.entity.types.fpt.NameOrdering;
 import com.wiinvent.lotusmile.domain.entity.types.fpt.Title;
 import lombok.AllArgsConstructor;
