@@ -1,0 +1,127 @@
+spring:
+  application:
+    name: lotusmile-account-service
+  security:
+    user:
+      password: abc
+  threads:
+    virtual:
+      enabled: ${THREAD_VIRTUAL_ENABLE:true}
+  redis:
+    redisson:
+      file: classpath:redisson.yml
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      validation-timeout: ${DATASOURCE_HIKARI_VALIDATION_TIMEOUT:10000}
+      connection-timeout: ${DATASOURCE_HIKARI_CONNECTION_TIMEOUT:10000}
+      maximum-pool-size: ${DATASOURCE_MAX_POOL_SIZE:10}
+      max-lifetime: ${DATASOURCE_HIKARI_MAX_LIFETIME:1800000}
+      data-source-properties:
+        cacheServerConfiguration: ${DATASOURCE_CACHE_SERVER_CONFIGURATION:true}
+        useLocalSessionState: ${DATASOURCE_USE_LOCAL_SESSION_STATE:true}
+        cachePrepStmts: ${DATASOURCE_CACHE_PREP_STMTS:true}
+        prepStmtCacheSize: ${DATASOURCE_PREP_STMT_CACHE_SIZE:250}
+        prepStmtCacheSqlLimit: ${DATASOURCE_PREP_STMT_CACHE_SQL_LIMIT:2048}
+        cacheCallableStmts: ${DATASOURCE_CACHE_CALLABLE_STMTS:true}
+        useServerPrepStmts: ${DATASOURCE_USE_SERVER_PREP_STMTS:true}
+        rewriteBatchedStatements: ${DATASOURCE_REWRITE_BATCHED_STATEMENTS:true}
+        maintainTimeStats: ${DATASOURCE_MAINTAIN_TIME_STATS:false}
+        logSlowQueries: ${DATASOURCE_LOG_SLOW_QUERIES:true}
+      leak-detection-threshold: ${$DATASOURCE_LEAK_DETECTION_THRESHOLD:0}
+  jpa:
+    open-in-view: ${JPA_OPEN_IN_VIEW:false}
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        generate_statistics: ${HIBERNATE_STATISTICS:true}
+        jdbc.batch_size: ${DATASOURCE_BATCH_SIZE:100}
+        order_inserts: true
+        order_updates: true
+        continue-on-error: true
+        format_sql: true
+server:
+  port: ${PORT}
+  timeoutSlowApi: ${LOTUSMILE_TIMEOUT_SLOW_API:100}
+  error:
+    include-stacktrace: ON_PARAM
+logging:
+  level:
+    org.springframework.web: ${LOG_LEVEL:info}
+    com.wiinvent.lotusmile: ${LOG_LEVEL:info}
+    org.hibernate.orm.jdbc.bind: ${HIBERNATE_BIND_LOGGING:off}
+management:
+  endpoints:
+    web:
+      base-path: /v1/monitor
+      exposure:
+        include: health,info,prometheus
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+jwt:
+  user-public-key: ${USER_PUBLIC_KEY}
+  user-private-key: ${USER_PRIVATE_KEY}
+  merchant-account-public-key: ${MERCHANT_ACCOUNT_PUBLIC_KEY}
+  merchant-account-private-key: ${MERCHANT_ACCOUNT_PRIVATE_KEY}
+  expire-time-merchant: ${JWT_EXPIRE_TIME_MERCHANT:7200}
+  merchant-refresh-token-expired-ms: ${JWT_MERCHANT_REFRESH_TOKEN_EXPIRED_MS:2592000000}
+  secret-merchant: ${JWT_SECRET_MERCHANT:Akf9452JSN9236GAFjjf842j}
+  refresh-token-expired-ms: ${JWT_REFRESH_TOKEN_EXPIRED_MS:2592000000}
+  access-token-expired-ms: ${JWT_ACCESS_TOKEN_EXPIRED_MS:86400000} # 1 day
+
+redis:
+  prefix-key: ${REDIS_PREFIX_KEY}
+vna:
+  partner-code: ${VNA_PARTNER_CODE}
+
+fpt:
+  domain: ${FPT_DOMAIN:test}
+  prefix: ${FPT_PREFIX:test}
+  user-name: ${FPT_USER_NAME:test}
+  password: ${FPT_PASSWORD:test}
+  token:
+    time:
+      expired:
+        before:
+          millisecond: ${FPT_TOKEN_TIME_EXPIRED_BEFORE:3600000} # 1 hour
+
+springdoc:
+  writer-with-order-by-keys: true
+  swagger-ui:
+    path: /v1/docs/account/index.html
+    enabled: true
+    filter: true
+    operations-sorter: true
+    display-request-duration: true
+    tags-sorter: alpha
+  api-docs:
+    path: /v1/docs/account/api/index.html
+    enabled: true
+  enable-spring-security: true
+  sort-converter:
+    enabled: true
+  model-converters:
+    pageable-converter:
+      enabled: true
+mail:
+  mail-server: ${MAIL_MAIL_SERVER:MAILGUN}
+  mailgun:
+    api-key: ${MAIL_MAILGUN_API_KEY:MAIL_MAILGUN_API_KEY}
+    domain-name: ${MAIL_MAILGUN_DOMAIN_NAME:MAIL_MAILGUN_DOMAIN_NAME}
+    from: ${MAIL_MAILGUN_FROM:MAIL_MAILGUN_FROM}
+telegram:
+  bot-token: ${TELEGRAM_BOT_TOKEN:7519335479:AAHEFhlGH9LJj03PINVRwAJSoSjzrUVpoM0}
+  chat-id: ${TELEGRAM_CHAT_ID:-4547909896}

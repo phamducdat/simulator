@@ -1,0 +1,27 @@
+sentinelServersConfig:
+  idleConnectionTimeout: 15000
+  connectTimeout: 15000
+  timeout: 10000
+  retryAttempts: 20
+  retryInterval: 1500
+  failedSlaveReconnectionInterval: 3000
+  failedSlaveNodeDetector: !<org.redisson.client.FailedConnectionDetector> {}
+  password: ${REDIS_PASSWORD:-null}
+  subscriptionsPerConnection: ${REDIS_SUBSCRIPTION_PER_CONNECTION:-5}
+  clientName: "lotusmile-account-service"
+  loadBalancer: !<org.redisson.connection.balancer.RoundRobinLoadBalancer> { }
+  subscriptionConnectionMinimumIdleSize: ${REDIS_SUBSCRIPTION_CONNECTION_MINIMUM_IDLE_SIZE:-1}
+  subscriptionConnectionPoolSize: ${REDIS_SUBSCRIPTION_CONNECTION_POOL_SIZE:-50}
+  slaveConnectionMinimumIdleSize: ${REDIS_SLAVE_CONNECTION_MINIMUM_IDLE_SIZE:-24}
+  slaveConnectionPoolSize: ${REDIS_SLAVE_CONNECTION_POOL_SIZE:-64}
+  masterConnectionMinimumIdleSize: ${REDIS_MASTER_CONNECTION_MINIMUM_IDLE_SIZE:-24}
+  masterConnectionPoolSize: ${REDIS_MASTER_CONNECTION_POOL_SIZE:-64}
+  readMode: ${REDIS_READ_MODE:-SLAVE}
+  subscriptionMode: ${REDIS_SUBSCRIPTION_READ_MODE:-SLAVE}
+  sentinelAddresses: ${REDIS_ADDRESSES}
+  masterName: ${REDIS_MASTER_NAME}
+  database: ${REDIS_DATABASE:-0}
+threads: ${REDIS_THREAD:-16}
+nettyThreads: ${REDIS_NETTY_THREADS:-32}
+codec: !<org.redisson.codec.Kryo5Codec> {}
+transportMode: "NIO"
