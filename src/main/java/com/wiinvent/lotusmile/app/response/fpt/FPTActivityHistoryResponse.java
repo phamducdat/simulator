@@ -19,7 +19,6 @@ public class FPTActivityHistoryResponse extends BaseFPTResponse {
 
   public List<Data> data;
 
-  @Deprecated(forRemoval = true)
   public static FPTActivityHistoryResponse fakeData(String fromDate, String toDate, Integer firstResult, Integer maxResults) {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     Random random = new Random();

@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.domain.annotation;
 
-import com.wiinvent.lotusmile.domain.service.PublicAuthenticationService;
 import jakarta.validation.Constraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

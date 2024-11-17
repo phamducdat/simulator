@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.domain.annotation;
 
-import com.wiinvent.lotusmile.domain.storage.UserStorage;
 import jakarta.validation.Constraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

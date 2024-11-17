@@ -1,10 +1,8 @@
 package com.wiinvent.lotusmile.app.controller;
 
-import com.wiinvent.lotusmile.app.dto.fpt.*;
+import com.wiinvent.lotusmile.app.dto.*;
 import com.wiinvent.lotusmile.app.response.fpt.*;
-import com.wiinvent.lotusmile.domain.entity.types.TransactionType;
 import com.wiinvent.lotusmile.domain.service.SimulatorService;
-import com.wiinvent.lotusmile.domain.service.external.ExternalService;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "v1/customer/auth/simulator")
-@Deprecated(forRemoval = true)
 @Hidden
 public class SimulatorController {
 

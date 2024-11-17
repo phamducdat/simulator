@@ -1,4 +1,4 @@
-package com.wiinvent.lotusmile.app.dto.fpt;
+package com.wiinvent.lotusmile.app.dto;
 
 import lombok.Data;
 import lombok.NonNull;

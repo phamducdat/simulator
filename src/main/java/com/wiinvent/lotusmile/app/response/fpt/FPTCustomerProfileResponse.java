@@ -1,12 +1,10 @@
 package com.wiinvent.lotusmile.app.response.fpt;
 
-import com.wiinvent.lotusmile.domain.entity.User;
-import com.wiinvent.lotusmile.domain.entity.UserProfile;
 import com.wiinvent.lotusmile.domain.entity.types.UserState;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.Gender;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.NameOrdering;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.PersonalType;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.Title;
+import com.wiinvent.lotusmile.domain.entity.types.Gender;
+import com.wiinvent.lotusmile.domain.entity.types.NameOrdering;
+import com.wiinvent.lotusmile.domain.entity.types.PersonalType;
+import com.wiinvent.lotusmile.domain.entity.types.Title;
 import com.wiinvent.lotusmile.domain.exception.ErrorCode;
 import com.wiinvent.lotusmile.domain.exception.ErrorMessage;
 import com.wiinvent.lotusmile.domain.util.Helper;

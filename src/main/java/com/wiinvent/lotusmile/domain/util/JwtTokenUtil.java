@@ -1,8 +1,5 @@
 package com.wiinvent.lotusmile.domain.util;
 
-import com.wiinvent.lotusmile.domain.entity.User;
-import com.wiinvent.lotusmile.domain.entity.types.MerchantAccountRole;
-import com.wiinvent.lotusmile.domain.entity.types.MerchantAccountState;
 import com.wiinvent.lotusmile.domain.exception.ErrorMessage;
 import com.wiinvent.lotusmile.domain.exception.UnAuthenticationException;
 import com.wiinvent.lotusmile.domain.pojo.MerchantTokenInfo;

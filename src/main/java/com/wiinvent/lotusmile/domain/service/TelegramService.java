@@ -15,7 +15,6 @@ import java.util.Map;
 
 @Service
 @Log4j2
-@Deprecated(forRemoval = true)
 public class TelegramService {
 
   @Value("${telegram.bot-token}")

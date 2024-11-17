@@ -1,4 +1,4 @@
-package com.wiinvent.lotusmile.domain.entity.types.fpt;
+package com.wiinvent.lotusmile.domain.entity.types;
 
 public enum Title {
   Mr,

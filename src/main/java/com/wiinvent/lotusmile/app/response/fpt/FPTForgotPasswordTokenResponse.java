@@ -1,6 +1,5 @@
 package com.wiinvent.lotusmile.app.response.fpt;
 
-import com.wiinvent.lotusmile.domain.entity.User;
 import lombok.*;
 
 import java.util.List;

@@ -1,8 +1,7 @@
-package com.wiinvent.lotusmile.app.dto.fpt;
+package com.wiinvent.lotusmile.app.dto;
 
-import com.wiinvent.lotusmile.domain.entity.types.fpt.NameOrdering;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.PersonalType;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.Title;
+import com.wiinvent.lotusmile.domain.entity.types.NameOrdering;
+import com.wiinvent.lotusmile.domain.entity.types.PersonalType;
 import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;

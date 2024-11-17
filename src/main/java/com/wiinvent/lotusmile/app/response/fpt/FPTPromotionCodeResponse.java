@@ -11,7 +11,6 @@ import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@Deprecated(forRemoval = true)
 @ToString(callSuper = true)
 public class FPTPromotionCodeResponse extends BaseFPTResponse {
 

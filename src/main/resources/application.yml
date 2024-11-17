@@ -75,7 +75,7 @@ jwt:
   user-public-key: ${USER_PUBLIC_KEY}
   user-private-key: ${USER_PRIVATE_KEY}
   merchant-account-public-key: ${MERCHANT_ACCOUNT_PUBLIC_KEY}
-  merchant-account-private-key: ${MERCHANT_ACCOUNT_PRIVATE_KEY}
+
   expire-time-merchant: ${JWT_EXPIRE_TIME_MERCHANT:7200}
   merchant-refresh-token-expired-ms: ${JWT_MERCHANT_REFRESH_TOKEN_EXPIRED_MS:2592000000}
   secret-merchant: ${JWT_SECRET_MERCHANT:Akf9452JSN9236GAFjjf842j}
@@ -85,7 +85,7 @@ jwt:
 redis:
   prefix-key: ${REDIS_PREFIX_KEY}
 vna:
-  partner-code: ${VNA_PARTNER_CODE}
+
 
 fpt:
   domain: ${FPT_DOMAIN:test}
@@ -117,9 +117,9 @@ springdoc:
     pageable-converter:
       enabled: true
 mail:
-  mail-server: ${MAIL_MAIL_SERVER:MAILGUN}
+
   mailgun:
-    api-key: ${MAIL_MAILGUN_API_KEY:MAIL_MAILGUN_API_KEY}
+
     domain-name: ${MAIL_MAILGUN_DOMAIN_NAME:MAIL_MAILGUN_DOMAIN_NAME}
     from: ${MAIL_MAILGUN_FROM:MAIL_MAILGUN_FROM}
 telegram:

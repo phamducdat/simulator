@@ -1,9 +1,7 @@
 package com.wiinvent.lotusmile.app.response.fpt;
 
-import com.wiinvent.lotusmile.domain.entity.User;
-import com.wiinvent.lotusmile.domain.entity.UserProfile;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.NameOrdering;
-import com.wiinvent.lotusmile.domain.entity.types.fpt.TierCode;
+import com.wiinvent.lotusmile.domain.entity.types.NameOrdering;
+import com.wiinvent.lotusmile.domain.entity.types.TierCode;
 import com.wiinvent.lotusmile.domain.exception.ErrorCode;
 import com.wiinvent.lotusmile.domain.util.JsonParser;
 import jakarta.annotation.Nullable;

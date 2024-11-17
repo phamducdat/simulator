@@ -13,7 +13,6 @@ public abstract class BaseFPTResponse {
 
   private String errorCode;
 
-  @Getter(AccessLevel.NONE)
   private String errorMessage;
 
   private String attribute;

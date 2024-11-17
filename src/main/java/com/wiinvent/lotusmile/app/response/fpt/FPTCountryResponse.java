@@ -8,7 +8,6 @@ import lombok.ToString;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
-@Deprecated(forRemoval = true)
 @Data
 @ToString(callSuper = true)
 public class FPTCountryResponse extends BaseFPTResponse {

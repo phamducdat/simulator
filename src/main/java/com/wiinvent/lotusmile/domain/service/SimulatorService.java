@@ -1,21 +1,13 @@
 package com.wiinvent.lotusmile.domain.service;
 
-import com.wiinvent.lotusmile.app.dto.fpt.*;
+import com.wiinvent.lotusmile.app.dto.*;
 import com.wiinvent.lotusmile.app.response.fpt.*;
-import com.wiinvent.lotusmile.domain.entity.User;
 import com.wiinvent.lotusmile.domain.entity.UserPassword;
-import com.wiinvent.lotusmile.domain.entity.UserProfile;
 import com.wiinvent.lotusmile.domain.entity.types.TransactionType;
 import com.wiinvent.lotusmile.domain.entity.types.UserState;
 import com.wiinvent.lotusmile.domain.exception.BadRequestException;
 import com.wiinvent.lotusmile.domain.exception.ErrorCode;
 import com.wiinvent.lotusmile.domain.repository.UserPasswordRepository;
-import com.wiinvent.lotusmile.domain.repository.UserProfileRepository;
-import com.wiinvent.lotusmile.domain.repository.UserRepository;
-import com.wiinvent.lotusmile.domain.service.external.ExternalService;
-import com.wiinvent.lotusmile.domain.storage.ConfigStorage;
-import com.wiinvent.lotusmile.domain.storage.UserProfileStorage;
-import com.wiinvent.lotusmile.domain.storage.UserStorage;
 import com.wiinvent.lotusmile.domain.util.GeneratorUtil;
 import com.wiinvent.lotusmile.domain.util.Helper;
 import com.wiinvent.lotusmile.domain.util.JsonParser;
@@ -38,17 +30,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.*;
 
 @Service
-@Deprecated(forRemoval = true)
 @Log4j2
-public class SimulatorService extends BaseService {
+public class SimulatorService {
 
   private final Random random = new Random();
-  @Autowired
-  UserRepository userRepository;
-  @Autowired
-  UserProfileRepository userProfileRepository;
-  @Autowired
-  UserPasswordRepository userPasswordRepository;
   @Autowired
   RemoteCache remoteCache;
   @Autowired
@@ -60,14 +45,9 @@ public class SimulatorService extends BaseService {
   @Value("${redis.prefix-key}")
   private String redisPrefixKey;
   @Autowired
-  private UserStorage userStorage;
-  @Autowired
-  private UserProfileStorage userProfileStorage;
+  private UserPasswordRepository userPasswordRepository;
   @Autowired
   private TelegramService telegramService;
-
-  @Autowired
-  private ConfigStorage configStorage;
 
   public FPTAccountSummaryResponse getAccountSummaryResponse(String identifierNo) {
     User user = userStorage.findUserByMainIdentity(identifierNo);
@@ -673,7 +653,6 @@ public class SimulatorService extends BaseService {
 
   @NoArgsConstructor
   @Data
-  @Deprecated(forRemoval = true)
   public static class PhoneCode {
     private String name;
     private String phoneCode;

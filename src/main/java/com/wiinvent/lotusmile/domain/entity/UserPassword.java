@@ -6,14 +6,12 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(schema = "\"simulator\"", name = "\"user_password\"")
 @Data
 @SuperBuilder
-@Deprecated(forRemoval = true)
 @NoArgsConstructor
-public class UserPassword extends BaseEntity {
+public class UserPassword {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

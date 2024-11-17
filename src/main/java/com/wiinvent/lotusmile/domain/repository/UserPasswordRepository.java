@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Deprecated(forRemoval = true)
 public interface UserPasswordRepository extends JpaRepository<UserPassword, Integer> {
 
   UserPassword findUserPasswordByUserIdOrEmailOrMainIdentifierOrPhoneNumber(Integer userId, String email, String mainIdentifier, String phoneNumber);
